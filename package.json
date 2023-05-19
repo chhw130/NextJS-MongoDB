@@ -19,6 +19,7 @@
     "framer-motion": "^10.12.12",
     "mongodb": "^5.5.0",
     "next": "13.4.2",
+    "next-http-proxy-middleware": "^1.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.0.4"

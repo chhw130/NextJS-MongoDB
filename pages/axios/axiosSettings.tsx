@@ -17,4 +17,10 @@ export const getData = async () =>
     .then((res) => res.data);
 
 export const specificIdolInform = () =>
-  instance.get(`/idols/`).then((response) => response.data);
+  instance
+    .get(
+      // "/api/write"
+      // "/idols"
+      `https://backend.curb.site/api/v1/feeds/`
+    )
+    .then((response) => response.data);
