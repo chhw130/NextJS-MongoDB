@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import ReactQueryProvider from "./Providers";
 import Link from "next/link";
 import { HStack } from "@chakra-ui/react";
-import NavContainer from "./navContainer";
+import NavContainer from "./NavContainer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {

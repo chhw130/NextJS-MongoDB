@@ -16,11 +16,11 @@ export const getData = async () =>
     .get("https://jsonplaceholder.typicode.com/todos/1")
     .then((res) => res.data);
 
-export const specificIdolInform = () =>
-  instance
-    .get(
-      // "/api/write"
-      // "/idols"
-      `https://backend.curb.site/api/v1/feeds/`
-    )
-    .then((response) => response.data);
+// export const specificIdolInform = () =>
+//   instance
+//     .get(
+//       // "/api/write"
+//       "/idols/schedules/"
+//       // `https://backend.curb.site/api/v1/feeds/`
+//     )
+//     .then((response) => response.data);

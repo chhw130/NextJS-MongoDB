@@ -1,15 +1,15 @@
 "use client";
 import useFeed from "@/hook/useFeed";
-import { specificIdolInform } from "@/pages/axios/axiosSettings";
 import { Input } from "@chakra-ui/react";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useEffect } from "react";
 
 export default function Write() {
-  const { data } = useQuery(["idols"], () => specificIdolInform());
+  const data = useFeed();
 
   console.log(data);
+
   return (
     <div className="p-20">
       <h4>글작성</h4>

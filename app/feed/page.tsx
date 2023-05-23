@@ -1,27 +1,22 @@
-"use client";
-import useFeed from "@/hook/useFeed";
-import React from "react";
+import React, { Suspense } from "react";
+import FeedList from "./FeedList";
 
-const feedPage = () => {
-  const { data } = useFeed();
+const feedPage = async () => {
+  // const { data } = useFeed();
+  const idolData = await getArtist();
 
-  console.log(data);
+  console.log(idolData);
   return (
-    <div className="list-bg">
-      <div className="list-item">
-        <h4>글제목</h4>
-        <p>1월 1일</p>
-      </div>
-      <div className="list-item">
-        <h4>글제목</h4>
-        <p>1월 1일</p>
-      </div>
-      <div className="list-item">
-        <h4>글제목</h4>
-        <p>1월 1일</p>
-      </div>
-    </div>
+    <>
+      <FeedList idolData={idolData} />
+      <p>{idolData?.idol_name_kr}</p>
+    </>
   );
 };
 
 export default feedPage;
+
+async function getArtist() {
+  const res = await fetch(`https://backend.myfavor.site/api/v1/idols/1/`);
+  return res.json();
+}
